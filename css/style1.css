@@ -1,0 +1,1295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTROLE DA ACESSIBILIDADE */
+:root {
+    --escala-fonte: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+header {
+    width: 100%;
+    height: 12vh;
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+
+/* LOGO */
+
+header img {
+    width: 14%;
+    height: auto;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: #354c96;
+    font-size: calc(20px * var(--escala-fonte));
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 50px;
+    overflow-wrap: break-word;
+}
+
+header nav a:hover {
+    color: #65c5d7;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+.acessibilidade {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: calc(19px * var(--escala-fonte));
+    color: #222;
+}
+
+.acessibilidade span {
+    margin-right: 5px;
+}
+
+.acessibilidade button {
+    width: 42px;
+    height: 40px;
+    min-width: 42px;
+    border: 1px solid #aaa;
+    background-color: #3b53a0;
+    color: white;
+    border-radius: 17px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BANNERS
+========================================================= */
+
+.banner {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner #imagemBanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* BOTÕES DOS BANNERS */
+
+.botao-banner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 65px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-anterior {
+    left: 20px;
+}
+
+.botao-proximo {
+    right: 20px;
+}
+
+.botao-banner:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.botao-anterior:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.botao-proximo:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* =========================================================
+   QUEM SOMOS
+========================================================= */
+
+#sobre {
+    background-color: white;
+    padding: 100px 7% 35px;
+    min-height: 80vh;
+    height: auto;
+}
+
+#sobre .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 190px;
+}
+
+
+/* TEXTO */
+
+.sobre-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.sobre-texto h2 {
+    color: #3b53a0;
+    font-size: calc(57px * var(--escala-fonte));
+    font-weight: 900;
+    margin-bottom: 19px;
+    overflow-wrap: break-word;
+}
+
+.sobre-texto p {
+    font-size: calc(23px * var(--escala-fonte));
+    line-height: 1.25;
+    margin-bottom: 12px;
+    overflow-wrap: break-word;
+}
+
+
+/* IMAGEM */
+
+.sobre-imagem {
+    flex: 1;
+    min-width: 0;
+    max-width: 550px;
+    height: 50vh;
+    min-height: 300px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   PALESTRAS
+========================================================= */
+
+#palestras {
+    background-color: #3b53a0;
+    padding: 60px 7%;
+    min-height: 90vh;
+    height: auto;
+}
+
+#palestras .container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 70vh;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 190px;
+}
+
+
+/* IMAGEM */
+
+.palestras-imagem {
+    flex: 1;
+    min-width: 0;
+    max-width: 550px;
+    height: 50vh;
+    min-height: 300px;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.palestras-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* TEXTO */
+
+.palestras-texto {
+    flex: 1;
+    min-width: 0;
+    color: white;
+}
+
+.palestras-texto h2 {
+    font-size: calc(50px * var(--escala-fonte));
+    font-weight: 900;
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+}
+
+.palestras-texto p {
+    font-size: calc(23px * var(--escala-fonte));
+    line-height: 1.35;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   EXAMES
+========================================================= */
+
+#exames {
+    background-color: white;
+    min-height: 78vh;
+    height: auto;
+    padding: 70px 7% 50px;
+    text-align: center;
+}
+
+#exames h1 {
+    color: #3b53a0;
+    font-size: calc(45px * var(--escala-fonte));
+    font-weight: 900;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+
+/* CONTAINER */
+
+.exames-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+
+/* CADA EXAME */
+
+.exame {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* CÍRCULO */
+
+.exame-imagem {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.exame-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exame-imagem:hover {
+    transform: scale(1.20);
+}
+
+
+/* TÍTULO */
+
+.exame h3 {
+    color: #3b53a0;
+    font-size: calc(25px * var(--escala-fonte));
+    font-weight: 900;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   AVALIAÇÕES
+========================================================= */
+
+#avaliacoes {
+    min-height: 95vh;
+    height: auto;
+    background-color: #d9d9d9;
+    padding: 60px 7%;
+    text-align: center;
+}
+
+#avaliacoes h2 {
+    color: #3b53a0;
+    padding: 30px;
+    font-size: calc(45px * var(--escala-fonte));
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+
+/* CONTAINER */
+
+.avaliacoes-container {
+    width: 240%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 290px;
+    transition: 0.3s;
+}
+
+
+/* CARD */
+
+.avaliacao {
+    flex: 1;
+    min-width: 600px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #c9c8c8;
+    position: relative;
+    padding: 80px 25px 25px;
+    text-align: left;
+}
+
+
+/* FOTO */
+
+.avaliacao-foto {
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.avaliacao-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 200px;
+}
+
+
+/* TEXTO */
+
+.avaliacao h1 {
+    font-size: calc(30px * var(--escala-fonte));
+    line-height: 1.25;
+    padding: 12px;
+    overflow-wrap: break-word;
+}
+
+.avaliacao p {
+    font-size: calc(24px * var(--escala-fonte));
+    line-height: 1.35;
+    padding: 12px;
+    color: #111;
+    overflow-wrap: break-word;
+}
+
+
+/* ESTRELAS */
+
+.estrelas {
+    height: 10vh;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   SEJA PALESTRANTE
+========================================================= */
+
+#contato {
+    background-color: #3b53a0;
+    min-height: 85vh;
+    height: auto;
+    padding: 80px 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contato h2 {
+    color: white;
+    font-size: calc(50px * var(--escala-fonte));
+    font-weight: 900;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    gap: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: calc(16px * var(--escala-fonte));
+}
+
+.enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4aafc0;
+    color: #ffffff;
+    border-radius: 15px;
+    width: 167px;
+    height: 67px;
+    font-size: calc(19px * var(--escala-fonte));
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 auto;
+    border: none;
+}
+
+.enviar:hover {
+    background-color: #ffffff;
+    color: #364b9b;
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+footer {
+    min-height: 350px;
+    height: auto;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 7%;
+    position: relative;
+    gap: 40px;
+}
+
+
+/* LOGO DO RODAPÉ */
+
+.footer-logo {
+    width: 370px;
+    max-width: 100%;
+}
+
+.footer-logo img {
+    width: 100%;
+}
+
+
+/* REDES SOCIAIS */
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 40px;
+}
+
+.redes-sociais p {
+    font-size: calc(25px * var(--escala-fonte));
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    overflow-wrap: break-word;
+}
+
+.redes-sociais a {
+    font-size: inherit;
+    color: white;
+    transition: 0.3s;
+    overflow-wrap: anywhere;
+}
+
+.redes-sociais a:hover {
+    color: #65c5d7;
+}
+
+.redes-sociais img {
+    width: 37px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+
+/* BOTÃO VOLTAR AO TOPO */
+
+.voltar-topo {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    transition: 0.3s;
+}
+
+.voltar-topo:hover {
+    color: #65c5d7;
+    transform: scale(1.23);
+}
+
+.voltar-topo a {
+    width: 39px;
+    height: 39px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+#footer2 {
+    background-color: black;
+    color: white;
+    min-height: 5vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+#footer2 h3 {
+    font-weight: lighter;
+    font-size: calc(16px * var(--escala-fonte));
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        height: auto;
+        min-height: 90px;
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header img {
+        width: 120px;
+        height: auto;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header nav a {
+        font-size: calc(14px * var(--escala-fonte));
+        margin-right: 0;
+    }
+
+    .acessibilidade {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .acessibilidade span {
+        font-size: calc(16px * var(--escala-fonte));
+    }
+
+    .acessibilidade button {
+        width: 38px;
+        min-width: 38px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .banner {
+        width: 100%;
+        height: 55vh;
+        min-height: 300px;
+    }
+
+    .botao-banner {
+        width: 45px;
+        height: 65px;
+        font-size: 34px;
+    }
+
+    .botao-anterior {
+        left: 10px;
+    }
+
+    .botao-proximo {
+        right: 10px;
+    }
+
+    #sobre {
+        height: auto;
+        min-height: 0;
+        padding: 60px 7%;
+    }
+
+    #sobre .container {
+        width: 100%;
+        max-width: 600px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sobre-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre-texto h2 {
+        font-size: calc(45px * var(--escala-fonte));
+    }
+
+    .sobre-texto p {
+        font-size: calc(19px * var(--escala-fonte));
+        line-height: 1.4;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+        max-width: 550px;
+        height: 350px;
+    }
+
+    #palestras {
+        height: auto;
+        padding: 60px 7%;
+    }
+
+    #palestras .container {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .palestras-imagem {
+        width: 100%;
+        max-width: 550px;
+        height: 350px;
+    }
+
+    .palestras-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .palestras-texto h2 {
+        font-size: calc(45px * var(--escala-fonte));
+    }
+
+    .palestras-texto p {
+        font-size: calc(19px * var(--escala-fonte));
+        line-height: 1.4;
+    }
+
+    #exames {
+        height: auto;
+        padding: 60px 7%;
+    }
+
+    #exames h1 {
+        font-size: calc(40px * var(--escala-fonte));
+        margin-bottom: 40px;
+    }
+
+    .exames-container {
+        width: 100%;
+        max-width: 650px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .exame {
+        width: 30%;
+    }
+
+    .exame-imagem {
+        width: 150px;
+        height: 150px;
+    }
+
+    .exame h3 {
+        font-size: calc(20px * var(--escala-fonte));
+    }
+
+    #avaliacoes {
+        height: auto;
+        padding: 60px 7%;
+    }
+
+    #avaliacoes h2 {
+        font-size: calc(40px * var(--escala-fonte));
+        margin-bottom: 60px;
+    }
+
+    .avaliacoes-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .avaliacao {
+        width: 100%;
+        max-width: 550px;
+        min-height: 0;
+        height: auto;
+        padding: 80px 25px 25px;
+    }
+
+    .avaliacao p {
+        font-size: calc(20px * var(--escala-fonte));
+        line-height: 1.4;
+    }
+
+    .avaliacao h1 {
+        text-align: center;
+        font-size: calc(25px * var(--escala-fonte));
+    }
+
+    #contato {
+        height: auto;
+        min-height: 750px;
+        padding: 70px 7%;
+    }
+
+    #contato h2 {
+        font-size: calc(40px * var(--escala-fonte));
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 17px;
+        font-size: calc(16px * var(--escala-fonte));
+    }
+
+    .enviar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 160px;
+        height: 60px;
+    }
+
+    footer {
+        height: auto;
+        flex-direction: column;
+        gap: 45px;
+        padding: 60px 7%;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 250px;
+    }
+
+    .footer-logo img {
+        width: 250px;
+    }
+
+    .redes-sociais {
+        margin-right: 0;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .redes-sociais p {
+        font-size: calc(20px * var(--escala-fonte));
+    }
+
+    .redes-sociais a {
+        font-size: inherit;
+    }
+
+    .redes-sociais img {
+        width: 30px;
+        height: 27px;
+    }
+
+    .voltar-topo {
+        right: 20px;
+        top: 20px;
+    }
+
+    #footer2 {
+        height: auto;
+        min-height: 50px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    #footer2 h3 {
+        font-size: calc(14px * var(--escala-fonte));
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - CELULAR
+========================================================= */
+
+@media (max-width: 468px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        flex-direction: column;
+        padding: 15px 12px;
+        gap: 12px;
+    }
+
+    header img {
+        width: 110px;
+        height: auto;
+    }
+
+    header nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+    }
+
+    header nav a {
+        font-size: calc(12px * var(--escala-fonte));
+        margin-right: 0;
+    }
+
+    .acessibilidade {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .acessibilidade span {
+        font-size: calc(14px * var(--escala-fonte));
+        margin-right: 3px;
+    }
+
+    .acessibilidade button {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .banner {
+        width: 100%;
+        height: 42vh;
+        min-height: 220px;
+    }
+
+    .banner #imagemBanner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .botao-banner {
+        width: 36px;
+        height: 55px;
+        font-size: 28px;
+        border-radius: 7px;
+    }
+
+    .botao-anterior {
+        left: 7px;
+    }
+
+    .botao-proximo {
+        right: 7px;
+    }
+
+    #sobre {
+        height: auto;
+        padding: 50px 6%;
+    }
+
+    #sobre .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sobre-texto {
+        width: 100%;
+    }
+
+    .sobre-texto h2 {
+        font-size: calc(34px * var(--escala-fonte));
+        margin-bottom: 20px;
+    }
+
+    .sobre-texto p {
+        font-size: calc(17px * var(--escala-fonte));
+        line-height: 1.45;
+        margin-bottom: 15px;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+        height: 250px;
+        min-height: 0;
+        border-radius: 20px;
+    }
+
+    .sobre-imagem img {
+        border-radius: 20px;
+    }
+
+    #palestras {
+        height: auto;
+        padding: 50px 6%;
+    }
+
+    #palestras .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .palestras-imagem {
+        width: 100%;
+        height: 250px;
+        min-height: 0;
+        border-radius: 15px;
+    }
+
+    .palestras-texto {
+        width: 100%;
+    }
+
+    .palestras-texto h2 {
+        font-size: calc(34px * var(--escala-fonte));
+        margin-bottom: 18px;
+    }
+
+    .palestras-texto p {
+        font-size: calc(17px * var(--escala-fonte));
+        line-height: 1.45;
+        margin-bottom: 15px;
+    }
+
+    #exames {
+        height: auto;
+        padding: 50px 6%;
+    }
+
+    #exames h1 {
+        font-size: calc(34px * var(--escala-fonte));
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+    .exames-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .exame {
+        width: 100%;
+    }
+
+    .exame-imagem {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .exame-imagem:hover {
+        transform: scale(1.08);
+    }
+
+    .exame h3 {
+        font-size: calc(21px * var(--escala-fonte));
+        line-height: 1.2;
+    }
+
+    #avaliacoes {
+        height: auto;
+        padding: 50px 6%;
+    }
+
+    #avaliacoes h2 {
+        font-size: calc(34px * var(--escala-fonte));
+        padding: 0;
+        margin-bottom: 70px;
+    }
+
+    .avaliacoes-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 85px;
+    }
+
+    .avaliacao {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 75px 18px 20px;
+        border-radius: 18px;
+    }
+
+    .avaliacao-foto {
+        width: 105px;
+        height: 105px;
+        top: -55px;
+    }
+
+    .avaliacao p {
+        font-size: calc(17px * var(--escala-fonte));
+        line-height: 1.45;
+        padding: 5px;
+    }
+
+    .avaliacao h1 {
+        font-size: calc(21px * var(--escala-fonte));
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .estrelas {
+        height: 45px;
+    }
+
+    #contato {
+        width: 100%;
+        height: auto;
+        min-height: 650px;
+        padding: 60px 6%;
+    }
+
+    #contato h2 {
+        font-size: calc(32px * var(--escala-fonte));
+        line-height: 1.15;
+        margin: 0 0 35px;
+    }
+
+    form {
+        width: 100%;
+        gap: 17px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: calc(16px * var(--escala-fonte));
+        border-radius: 15px;
+    }
+
+    .enviar {
+        width: 145px;
+        height: 55px;
+        margin: 10px auto 0;
+        font-size: calc(17px * var(--escala-fonte));
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 55px 6%;
+    }
+
+    .footer-logo {
+        width: 200px;
+    }
+
+    .footer-logo img {
+        width: 200px;
+    }
+
+    .redes-sociais {
+        width: 100%;
+        margin: 0;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .redes-sociais p {
+        font-size: calc(16px * var(--escala-fonte));
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .redes-sociais a {
+        font-size: inherit;
+        word-break: break-word;
+    }
+
+    .redes-sociais img {
+        width: 27px;
+        height: 24px;
+    }
+
+    .voltar-topo {
+        right: 15px;
+        top: 15px;
+    }
+
+    .voltar-topo a {
+        width: 35px;
+        height: 35px;
+        font-size: 23px;
+    }
+
+    #footer2 {
+        width: 100%;
+        min-height: 45px;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    #footer2 h3 {
+        font-size: calc(11px * var(--escala-fonte));
+        line-height: 1.3;
+    }
+}
+
