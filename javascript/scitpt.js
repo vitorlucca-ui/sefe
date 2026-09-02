@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
 
             logo.src =
-                "../imagens/logoSEFE.png";
+                "../imagens/logosefe.png";
 
         }
 
