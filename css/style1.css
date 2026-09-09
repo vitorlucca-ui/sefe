@@ -407,13 +407,13 @@ header nav a:hover {
 /* CONTAINER */
 
 .avaliacoes-container {
-    width: 240%;
+    width: 100%;
     max-width: 1200px;
     height: auto;
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 290px;
+    gap: 60px;
     transition: 0.3s;
 }
 
@@ -422,7 +422,8 @@ header nav a:hover {
 
 .avaliacao {
     flex: 1;
-    min-width: 600px;
+    width: 100%;
+    min-width: 0;
     min-height: 500px;
     height: auto;
     border-radius: 20px;
@@ -844,15 +845,17 @@ footer {
 
     .avaliacoes-container {
         width: 100%;
+        max-width: 550px;
         height: auto;
         flex-direction: column;
         align-items: center;
-        gap: 80px;
+        gap: 60px;
     }
 
     .avaliacao {
         width: 100%;
         max-width: 550px;
+        min-width: 0;
         min-height: 0;
         height: auto;
         padding: 80px 25px 25px;
@@ -1158,6 +1161,7 @@ footer {
 
     .avaliacoes-container {
         width: 100%;
+        max-width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -1167,6 +1171,8 @@ footer {
 
     .avaliacao {
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         min-height: 0;
         height: auto;
         padding: 75px 18px 20px;
@@ -1193,6 +1199,8 @@ footer {
 
     .estrelas {
         height: 45px;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     #contato {
